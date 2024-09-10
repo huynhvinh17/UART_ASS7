@@ -28,6 +28,16 @@
  *
  * @param portClockEnable The clock enable bit mask for peripheral port
  */
+void HAL_SIM_SOPT2_EnableClock(HAL_SCGC4_clock_control_t portClockEnable)
+{
+    SIM->SOPT2 |= portClockEnable;
+}
+
+void HAL_SIM_SCGC4_EnableClock(HAL_SCGC4_clock_control_t portClockEnable)
+{
+    SIM->SCGC4 |= portClockEnable; /** Enable clock for specific peripheral port */
+}
+
 void HAL_SIM_SCGC5_EnableClock(HAL_port_SCGC5_clock_control_t portClockEnable)
 {
     SIM->SCGC5 |= portClockEnable; /** Enable clock for specific peripheral port */

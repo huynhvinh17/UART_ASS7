@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Sources/HAL/HAL_UART/subdir.mk
 -include Sources/HAL/subdir.mk
 -include Sources/DRIVER/subdir.mk
 -include Sources/App/subdir.mk

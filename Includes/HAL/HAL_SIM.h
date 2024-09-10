@@ -12,6 +12,29 @@
  * Prototype
  ******************************************************************************/
 
+typedef enum SOPT2
+{
+    CLKOUTSEL_clockEnable = SIM_SOPT2_CLKOUTSEL_MASK,
+    PLLFLLSEL__clockEnable = SIM_SOPT2_PLLFLLSEL_MASK,
+    RTCCLKOUTSEL_clockEnable = SIM_SOPT2_RTCCLKOUTSEL_MASK,
+    TPMSRC__clockEnable = SIM_SOPT2_TPMSRC_MASK,
+    UART0__clockEnable = SIM_SOPT2_UART0SRC(1),
+    USBSRC__clockEnable = SIM_SOPT2_USBSRC_MASK,
+} HAL_SOPT2_clock_control_t;
+
+typedef enum SCGC4
+{
+    SMP_clockEnable = SIM_SCGC4_CMP_MASK,
+    I2C0_clockEnable = SIM_SCGC4_I2C0_MASK,
+    I2C1_clockEnable = SIM_SCGC4_I2C1_MASK,
+    SPI0_clockEnable = SIM_SCGC4_SPI0_MASK,
+    SPI1_clockEnable = SIM_SCGC4_SPI1_MASK,
+    UART0_clockEnable = SIM_SCGC4_UART0_MASK,
+    UART1_clockEnable = SIM_SCGC4_UART1_MASK,
+    UART2_clockEnable = SIM_SCGC4_UART2_MASK,
+    USBOTG_clockEnable = SIM_SCGC4_USBOTG_MASK,
+} HAL_SCGC4_clock_control_t;
+
 /**
  * @brief Enumeration for system clock control settings for various GPIO port
  *
@@ -40,11 +63,10 @@ typedef enum SCGC6
 
 } HAL_SCGC6_clock_control_t;
 
-/**
- * @brief Enable clock for a peripheral port
- *
- * @param portClockEnable The clock enable bit mask for peripheral port
- */
+void HAL_SIM_SOPT2_EnableClock(HAL_SCGC4_clock_control_t portClockEnable);
+
+void HAL_SIM_SCGC4_EnableClock(HAL_SCGC4_clock_control_t portClockEnable);
+
 void HAL_SIM_SCGC5_EnableClock(HAL_port_SCGC5_clock_control_t portClockEnable);
 
 void HAL_SIM_SCGC6_EnableClock(HAL_SCGC6_clock_control_t portClockEnable);

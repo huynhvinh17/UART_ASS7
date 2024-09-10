@@ -23,12 +23,18 @@
  * Code
  ******************************************************************************/
 
-/**
- * @brief Enable clock for a peripheral port
- *
- * @param portClockEnable The clock enable bit mask for peripheral port
- */
-void DRIVER_SIM_SCGC5_EnableClock(DRIVER_port_clock_control_t clockEnable)
+
+void DRIVER_SIM_SOPT2_EnableClock(DRIVER_SOPT2_clock_control_t clockEnable)
+{
+    HAL_SIM_SOPT2_EnableClock(clockEnable); /** Enable clock for specific peripheral port */
+}
+
+void DRIVER_SIM_SCGC4_EnableClock(DRIVER_SCGC4_clock_control_t clockEnable)
+{
+    HAL_SIM_SCGC4_EnableClock(clockEnable); /** Enable clock for specific peripheral port */
+}
+
+void DRIVER_SIM_SCGC5_EnableClock(DRIVER_port_SCGC5_clock_control_t clockEnable)
 {
     HAL_SIM_SCGC5_EnableClock(clockEnable); /** Enable clock for specific peripheral port */
 }

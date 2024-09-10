@@ -2,11 +2,15 @@
 #include "core_cm0plus.h"
 #include <string.h>
 #include "../Includes/APP/APP.h"
-#define UART0_RX (1 << 1)
-#define UART0_TX (1 << 2)
+#include "../Includes/DRIVER/DRIVER_UART.h"
+
+#define PTA1_UART0_RX 1
+#define PTA2_UART0_TX 2
 
 #define MAX_STRING_LENGTH 256
 #define BAUD_RATE 115200
+#define DEFAULT_MCG 20971520
+#define OVER_SAMPLING_RATIO 16
 
 /* LED definitions */
 #define RED_LED_PIN 29	// PortE pin for Red LED
@@ -23,21 +27,20 @@ void process_command(const char *command);
 
 void init_clk_and_pin_UART0(void)
 {
-	SIM->SCGC4 |= SIM_SCGC4_UART0_MASK;	 /* Enable clock gate for UART0 */
-	SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK;	 /* Enable clock gate for PortA (TX RX) */
-	SIM->SOPT2 |= SIM_SOPT2_UART0SRC(1); /* Selects the clock source for UART0 as MCGFLLCLK */
+	DRIVER_SIM_SCGC4_EnableClock(UART0_clockEnable);
+	DRIVER_SIM_SCGC5_EnableClock(PORTA_clockEnable);
+	DRIVER_SIM_SOPT2_EnableClock(UART0__clockEnable);
 
-	PORTA->PCR[1] = PORT_PCR_MUX(2); /* Set PTA1 as UART0_RX */
-	PORTA->PCR[2] = PORT_PCR_MUX(2); /* Set PTA2 as UART0_TX */
+	DRIVER_PORT_Init(PORTA, PTA1_UART0_RX, Pin_ALT2);
+	DRIVER_PORT_Init(PORTA, PTA2_UART0_TX, Pin_ALT2);
 }
 
 void init_UART0(void)
 {
-	uint32_t baud_SBR = (uint32_t)((20971520) / (BAUD_RATE * 16));
-	UART0->BDH = (baud_SBR >> 8) & UART_BDH_SBR_MASK;
-	UART0->BDL = baud_SBR & UART_BDL_SBR_MASK;
-
-	UART0->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);
+	uint32_t baud_SBR = (uint32_t)((DEFAULT_MCG) / (BAUD_RATE * OVER_SAMPLING_RATIO));
+	 DRIVER_UART_BDH(UART0, baud_SBR);
+	 DRIVER_UART_BDL(UART0, baud_SBR);
+	DRIVER_UART_C2(UART0, transmitter_enable, receiver_enable);
 }
 
 void send_bytes(char data)
@@ -80,7 +83,7 @@ void get_string(char *buffer, int maxLength)
 		i++;
 	} while (1);
 
-	buffer[i] = '\0'; // Null-terminate the string
+	buffer[i] = '\0';
 }
 
 void process_command(const char *command)
@@ -162,7 +165,6 @@ int main(void)
 	while (1)
 	{
 		get_string(commandBuffer, MAX_STRING_LENGTH);
-		// send_string(commandBuffer);
 		process_command(commandBuffer);
 	}
 

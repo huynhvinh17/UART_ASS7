@@ -19,7 +19,11 @@
 typedef enum
 {
     Pin_analog = PORT_PCR_MUX(0), /** Configures the pin for analog functions */
-    Pin_GPIO = PORT_PCR_MUX(1)    /** Configures the pin for general-purpose I/O */
+    Pin_GPIO = PORT_PCR_MUX(1),   /** Configures the pin for general-purpose I/O */
+    Pin_ALT2 = PORT_PCR_MUX(2),   /** Configures the pin for general-purpose I/O */
+    Pin_ALT3 = PORT_PCR_MUX(3),   /** Configures the pin for general-purpose I/O */
+    Pin_ALT4 = PORT_PCR_MUX(4),   /** Configures the pin for general-purpose I/O */
+    Pin_ALT5 = PORT_PCR_MUX(5),   /** Configures the pin for general-purpose I/O */
 } HAL_pin_mux_control_t;
 
 /** Enumeration for interrupt configuration option */

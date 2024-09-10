@@ -17,7 +17,12 @@ Sources/main.o: ../Sources/main.c ../Includes/MKL46Z4.h \
  ../Sources/../Includes/DRIVER/DRIVER_ADC.h \
  ../Sources/../Includes/DRIVER/DRIVER_Systick.h \
  ../Sources/../Includes/DRIVER/DRIVER_Software_timer.h \
- ../Sources/../Includes/HAL/HAL_Systick.h
+ ../Sources/../Includes/HAL/HAL_Systick.h \
+ ../Sources/../Includes/DRIVER/DRIVER_UART.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDH.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDL.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C1.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C2.h
 
 ../Includes/MKL46Z4.h:
 
@@ -64,3 +69,13 @@ Sources/main.o: ../Sources/main.c ../Includes/MKL46Z4.h \
 ../Sources/../Includes/DRIVER/DRIVER_Software_timer.h:
 
 ../Sources/../Includes/HAL/HAL_Systick.h:
+
+../Sources/../Includes/DRIVER/DRIVER_UART.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDH.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDL.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_C1.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_C2.h:

@@ -11,7 +11,9 @@ C_SRCS += \
 ../Sources/DRIVER/DRIVER_PORT.c \
 ../Sources/DRIVER/DRIVER_SIM.c \
 ../Sources/DRIVER/DRIVER_Software_timer.c \
-../Sources/DRIVER/DRIVER_Systick.c 
+../Sources/DRIVER/DRIVER_Systick.c \
+../Sources/DRIVER/DRIVER_UART.c \
+../Sources/DRIVER/DRIVER_UART_checkData.c 
 
 OBJS += \
 ./Sources/DRIVER/DRIVER_ADC.o \
@@ -21,7 +23,9 @@ OBJS += \
 ./Sources/DRIVER/DRIVER_PORT.o \
 ./Sources/DRIVER/DRIVER_SIM.o \
 ./Sources/DRIVER/DRIVER_Software_timer.o \
-./Sources/DRIVER/DRIVER_Systick.o 
+./Sources/DRIVER/DRIVER_Systick.o \
+./Sources/DRIVER/DRIVER_UART.o \
+./Sources/DRIVER/DRIVER_UART_checkData.o 
 
 C_DEPS += \
 ./Sources/DRIVER/DRIVER_ADC.d \
@@ -31,7 +35,9 @@ C_DEPS += \
 ./Sources/DRIVER/DRIVER_PORT.d \
 ./Sources/DRIVER/DRIVER_SIM.d \
 ./Sources/DRIVER/DRIVER_Software_timer.d \
-./Sources/DRIVER/DRIVER_Systick.d 
+./Sources/DRIVER/DRIVER_Systick.d \
+./Sources/DRIVER/DRIVER_UART.d \
+./Sources/DRIVER/DRIVER_UART_checkData.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
