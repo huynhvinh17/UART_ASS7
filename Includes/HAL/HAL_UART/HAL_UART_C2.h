@@ -10,7 +10,6 @@ typedef enum C2_TIE
 } HAL_UART_C2_TIE_t;
 
 typedef HAL_UART_C2_TIE_t HAL_UART_C2_TCIE_t ;
-
 typedef HAL_UART_C2_TCIE_t HAL_UART_C2_RIE_t;
 typedef HAL_UART_C2_TCIE_t HAL_UART_C2_ILIE_t;
 

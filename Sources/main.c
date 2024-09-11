@@ -12,9 +12,10 @@
 #define DEFAULT_MCG 20971520
 #define OVER_SAMPLING_RATIO 16
 
-/* LED definitions */
-#define RED_LED_PIN 29	// PortE pin for Red LED
-#define GREEN_LED_PIN 5 // PortD pin for Green LED
+#define RED_LED_PIN 29
+#define GREEN_LED_PIN 5
+
+char commandBuffer[MAX_STRING_LENGTH];
 
 /* Function Prototypes */
 void init_clk_and_pin_UART0(void);
@@ -33,21 +34,28 @@ void init_clk_and_pin_UART0(void)
 
 	DRIVER_PORT_Init(PORTA, PTA1_UART0_RX, Pin_ALT2);
 	DRIVER_PORT_Init(PORTA, PTA2_UART0_TX, Pin_ALT2);
+	DRIVER_NVIC_EnableIRQ(UART0_IRQn);
 }
 
 void init_UART0(void)
 {
 	uint32_t baud_SBR = (uint32_t)((DEFAULT_MCG) / (BAUD_RATE * OVER_SAMPLING_RATIO));
-	 DRIVER_UART_BDH(UART0, baud_SBR);
-	 DRIVER_UART_BDL(UART0, baud_SBR);
+	DRIVER_UART_BDH(UART0, baud_SBR);
+	DRIVER_UART_BDL(UART0, baud_SBR);
 	DRIVER_UART_C2(UART0, transmitter_enable, receiver_enable);
+	HAL_UART_C2_RIE(UART0, hardware_interrupt_enable);
 }
 
 void send_bytes(char data)
 {
+
 	UART0->D = data;
+	// UART_data(UART0) = data;
+
 	while (!(UART0->S1 & UART_S1_TC_MASK))
 		;
+	//		while (!(HAL_UART_S1_TC(UART0)))
+	//			;
 }
 
 void send_string(const char *string)
@@ -60,6 +68,8 @@ void send_string(const char *string)
 
 char UART0_GetChar()
 {
+	//	while (!(HAL_UART_S1_RDRF(UART0)))
+	//		;
 	while (!(UART0->S1 & UART_S1_RDRF_MASK))
 		;
 	return UART0->D;
@@ -86,7 +96,7 @@ void get_string(char *buffer, int maxLength)
 	buffer[i] = '\0';
 }
 
-void process_command(const char *command)
+void access_command(const char *command)
 {
 	if (strcmp(command, "LED STATUS") == 0)
 	{
@@ -146,9 +156,15 @@ void process_command(const char *command)
 	}
 }
 
+void UART0_IRQHandler(void)
+{
+
+	get_string(commandBuffer, MAX_STRING_LENGTH);
+	access_command(commandBuffer);
+}
+
 int main(void)
 {
-	char commandBuffer[MAX_STRING_LENGTH];
 
 	init_clk_and_pin_UART0();
 	init_UART0();
@@ -162,10 +178,9 @@ int main(void)
 	send_string("GREEN ON   - Turn on the Green LED\r\n");
 	send_string("GREEN OFF  - Turn off the Green LED\r\n");
 	send_string("HELP       - Show this help message\r\n");
+
 	while (1)
 	{
-		get_string(commandBuffer, MAX_STRING_LENGTH);
-		process_command(commandBuffer);
 	}
 
 	return 0;
