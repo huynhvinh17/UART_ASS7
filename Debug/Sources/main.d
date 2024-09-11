@@ -22,7 +22,9 @@ Sources/main.o: ../Sources/main.c ../Includes/MKL46Z4.h \
  ../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDH.h \
  ../Sources/../Includes/HAL/HAL_UART/HAL_UART_BDL.h \
  ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C1.h \
- ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C2.h
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C2.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_D.h \
+ ../Sources/../Includes/HAL/HAL_UART/HAL_UART_S1.h
 
 ../Includes/MKL46Z4.h:
 
@@ -79,3 +81,7 @@ Sources/main.o: ../Sources/main.c ../Includes/MKL46Z4.h \
 ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C1.h:
 
 ../Sources/../Includes/HAL/HAL_UART/HAL_UART_C2.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_D.h:
+
+../Sources/../Includes/HAL/HAL_UART/HAL_UART_S1.h:

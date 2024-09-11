@@ -55,7 +55,7 @@ void HAL_GPIO_Init(GPIO_Type *GPIOx, uint32_t pin, HAL_config_pin_t pinState)
 void HAL_GPIO_TogglePin(GPIO_Type *GPIOx, uint32_t pin)
 {
     uint32_t pinMask = (1 << pin); /** Create a mask to the bit corresponding  */
-    GPIOx->PTOR |= pinMask;      /** Tonggle the state of the pin */
+    GPIOx->PTOR |= pinMask;        /** Tonggle the state of the pin */
 }
 
 /**
@@ -79,4 +79,9 @@ void HAL_GPIO_WritePin(GPIO_Type *GPIOx, uint32_t pin, HAL_pin_state_t pinState)
     {
         GPIOx->PDOR |= pinMask; /** Set the pin state to low */
     }
+}
+
+bool HAL_GPIO_PinStatus(GPIO_Type *GPIOx, uint32_t pin)
+{
+    return (GPIOx->PDOR & (1 << pin));
 }

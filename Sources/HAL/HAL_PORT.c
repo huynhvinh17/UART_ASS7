@@ -113,3 +113,4 @@ void HAL_PORT_PullSelect(PORT_Type *PORT, uint32_t pin, HAL_pull_select_t select
         PORT->PCR[pin] &= ~PORT_PCR_PS_MASK; /**  Select pull-down resistor */
     }
 }
+

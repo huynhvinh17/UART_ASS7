@@ -59,3 +59,8 @@ void DRIVER_GPIO_WritePin(GPIO_Type *GPIOx, uint32_t pin, DRIVER_pin_state_t pin
 {
     HAL_GPIO_WritePin(GPIOx, pin, pinState); /** Call the HAL function to write the specified state to the pin */
 }
+
+bool DRIVER_GPIO_PinStatus(GPIO_Type *GPIOx, uint32_t pin)
+{
+    HAL_GPIO_PinStatus(GPIOx,pin);
+}

@@ -4,6 +4,7 @@
 #include "MKL46Z4.h"
 #include "HAL_PORT.h"
 #include "stdint.h"
+#include <stdbool.h>
 
 /*******************************************************************************
  * Definitions
@@ -60,6 +61,7 @@ void HAL_GPIO_TogglePin(GPIO_Type *GPIOx, uint32_t pin);
  */
 void HAL_GPIO_WritePin(GPIO_Type *GPIOx, uint32_t pin, HAL_pin_state_t pinState);
 
+bool HAL_GPIO_PinStatus(GPIO_Type *GPIOx, uint32_t pin);
 /*******************************************************************************
  * Code
  ******************************************************************************/

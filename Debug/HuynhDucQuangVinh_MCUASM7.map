@@ -23,14 +23,14 @@ c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm
 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
                               c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strcmp.o)
-                              ./Sources/main.o (strcmp)
+                              ./Sources/App/APP.o (strcmp)
 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
                               c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o) (_exit)
 
 Allocating common symbols
 Common symbol       size              file
 
-commandBuffer       0x100             ./Sources/main.o
+commandBuffer       0xff              ./Sources/App/APP.o
 swTimerArray        0xa0              ./Sources/DRIVER/DRIVER_Software_timer.o
 adc_value           0x2               ./Sources/DRIVER/DRIVER_PORT.o
 
@@ -190,14 +190,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .data          0x00000000        0x0 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .bss           0x00000000        0x0 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .text.UART_data
-                0x00000000       0x1c ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_info    0x00000000      0x14f ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_abbrev  0x00000000       0xa5 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_aranges
-                0x00000000       0x20 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_ranges  0x00000000       0x10 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_macro   0x00000000       0x8d ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_macro   0x00000000      0x802 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_UART/HAL_UART_D.o
@@ -209,12 +201,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_line    0x00000000      0x20e ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_str     0x00000000    0x4f427 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .ARM.attributes
-                0x00000000       0x32 ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_frame   0x00000000       0x30 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
@@ -232,10 +218,6 @@ Discarded input sections
  .bss           0x00000000        0x0 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .text.HAL_UART_S1_TDRE
                 0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .text.HAL_UART_S1_TC
-                0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .text.HAL_UART_S1_RDRF
-                0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .text.HAL_UART_S1_IDLE
                 0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .text.HAL_UART_S1_OR
@@ -246,12 +228,6 @@ Discarded input sections
                 0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .text.HAL_UART_S1_PF
                 0x00000000       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_info    0x00000000      0x263 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_abbrev  0x00000000       0xbf ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_aranges
-                0x00000000       0x58 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_ranges  0x00000000       0x48 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_macro   0x00000000       0x96 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_macro   0x00000000      0x802 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
@@ -263,13 +239,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_macro   0x00000000       0x22 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_line    0x00000000      0x294 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_str     0x00000000    0x4f4e4 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .ARM.attributes
-                0x00000000       0x32 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_frame   0x00000000      0x110 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_ADC.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_ADC.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_ADC.o
@@ -314,6 +283,7 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/HAL/HAL_GPIO.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_GPIO.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_GPIO.o
+ .group         0x00000000        0x8 ./Sources/HAL/HAL_GPIO.o
  .text          0x00000000        0x0 ./Sources/HAL/HAL_GPIO.o
  .data          0x00000000        0x0 ./Sources/HAL/HAL_GPIO.o
  .bss           0x00000000        0x0 ./Sources/HAL/HAL_GPIO.o
@@ -330,6 +300,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/HAL/HAL_GPIO.o
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_GPIO.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_GPIO.o
+ .debug_macro   0x00000000       0x22 ./Sources/HAL/HAL_GPIO.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_NVIC.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_NVIC.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_NVIC.o
@@ -382,6 +353,16 @@ Discarded input sections
                 0x00000000       0xd4 ./Sources/HAL/HAL_PIT.o
  .text.HAL_PIT_timer_Enable
                 0x00000000       0x4c ./Sources/HAL/HAL_PIT.o
+ .text.HAL_PIT_timer_clear_flag
+                0x00000000       0x40 ./Sources/HAL/HAL_PIT.o
+ .text.HAL_PIT_timer_flag_isSet
+                0x00000000       0x34 ./Sources/HAL/HAL_PIT.o
+ .debug_info    0x00000000      0x35b ./Sources/HAL/HAL_PIT.o
+ .debug_abbrev  0x00000000      0x10b ./Sources/HAL/HAL_PIT.o
+ .debug_aranges
+                0x00000000       0x48 ./Sources/HAL/HAL_PIT.o
+ .debug_ranges  0x00000000       0x38 ./Sources/HAL/HAL_PIT.o
+ .debug_macro   0x00000000       0x96 ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000      0x802 ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000       0x16 ./Sources/HAL/HAL_PIT.o
@@ -394,6 +375,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000       0x22 ./Sources/HAL/HAL_PIT.o
+ .debug_line    0x00000000      0x262 ./Sources/HAL/HAL_PIT.o
+ .debug_str     0x00000000    0x4f66a ./Sources/HAL/HAL_PIT.o
+ .comment       0x00000000       0x71 ./Sources/HAL/HAL_PIT.o
+ .ARM.attributes
+                0x00000000       0x32 ./Sources/HAL/HAL_PIT.o
+ .debug_frame   0x00000000       0xd0 ./Sources/HAL/HAL_PIT.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_PORT.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_PORT.o
  .group         0x00000000        0x8 ./Sources/HAL/HAL_PORT.o
@@ -555,6 +542,7 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_GPIO.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_GPIO.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_GPIO.o
+ .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_GPIO.o
  .text          0x00000000        0x0 ./Sources/DRIVER/DRIVER_GPIO.o
  .data          0x00000000        0x0 ./Sources/DRIVER/DRIVER_GPIO.o
  .bss           0x00000000        0x0 ./Sources/DRIVER/DRIVER_GPIO.o
@@ -571,6 +559,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/DRIVER/DRIVER_GPIO.o
  .debug_macro   0x00000000       0x6b ./Sources/DRIVER/DRIVER_GPIO.o
  .debug_macro   0x00000000     0xd132 ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_macro   0x00000000       0x22 ./Sources/DRIVER/DRIVER_GPIO.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_NVIC.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_NVIC.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_NVIC.o
@@ -587,14 +576,16 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/DRIVER/DRIVER_NVIC.o
  .data          0x00000000        0x0 ./Sources/DRIVER/DRIVER_NVIC.o
  .bss           0x00000000        0x0 ./Sources/DRIVER/DRIVER_NVIC.o
+ .bss.PIT0_callback
+                0x00000000        0x4 ./Sources/DRIVER/DRIVER_NVIC.o
+ .bss.PIT1_callback
+                0x00000000        0x4 ./Sources/DRIVER/DRIVER_NVIC.o
+ .bss.PIT0_interruptFlag
+                0x00000000        0x1 ./Sources/DRIVER/DRIVER_NVIC.o
  .bss.PIT1_interruptFlag
                 0x00000000        0x1 ./Sources/DRIVER/DRIVER_NVIC.o
  .text.DRIVER_NVIC_setPriority
                 0x00000000       0x2c ./Sources/DRIVER/DRIVER_NVIC.o
- .text.DRIVER_PIT0_Callback
-                0x00000000       0x18 ./Sources/DRIVER/DRIVER_NVIC.o
- .text.DRIVER_PIT1_Callback
-                0x00000000       0x18 ./Sources/DRIVER/DRIVER_NVIC.o
  .debug_macro   0x00000000      0x802 ./Sources/DRIVER/DRIVER_NVIC.o
  .debug_macro   0x00000000       0x16 ./Sources/DRIVER/DRIVER_NVIC.o
  .debug_macro   0x00000000       0x16 ./Sources/DRIVER/DRIVER_NVIC.o
@@ -629,6 +620,16 @@ Discarded input sections
                 0x00000000       0x38 ./Sources/DRIVER/DRIVER_PIT.o
  .text.DRIVER_PIT_timer_Enable
                 0x00000000       0x28 ./Sources/DRIVER/DRIVER_PIT.o
+ .text.DRIVER_PIT_timer_clear_flag
+                0x00000000       0x1c ./Sources/DRIVER/DRIVER_PIT.o
+ .text.DRIVER_PIT_timer_flag_isSet
+                0x00000000       0x20 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_info    0x00000000      0x288 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_abbrev  0x00000000       0x97 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_aranges
+                0x00000000       0x48 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_ranges  0x00000000       0x38 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_macro   0x00000000       0x9b ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000      0x802 ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000       0x22 ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000       0x16 ./Sources/DRIVER/DRIVER_PIT.o
@@ -640,6 +641,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000       0x6b ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000     0xd132 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_line    0x00000000      0x28c ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_str     0x00000000    0x4f694 ./Sources/DRIVER/DRIVER_PIT.o
+ .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_PIT.o
+ .ARM.attributes
+                0x00000000       0x32 ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_frame   0x00000000       0xd0 ./Sources/DRIVER/DRIVER_PIT.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_PORT.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_PORT.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_PORT.o
@@ -806,6 +813,7 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART.o
+ .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART.o
  .text          0x00000000        0x0 ./Sources/DRIVER/DRIVER_UART.o
  .data          0x00000000        0x0 ./Sources/DRIVER/DRIVER_UART.o
  .bss           0x00000000        0x0 ./Sources/DRIVER/DRIVER_UART.o
@@ -820,6 +828,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/DRIVER/DRIVER_UART.o
  .debug_macro   0x00000000       0x6b ./Sources/DRIVER/DRIVER_UART.o
  .debug_macro   0x00000000     0xd132 ./Sources/DRIVER/DRIVER_UART.o
+ .debug_macro   0x00000000       0x22 ./Sources/DRIVER/DRIVER_UART.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART_checkData.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART_checkData.o
  .group         0x00000000        0x8 ./Sources/DRIVER/DRIVER_UART_checkData.o
@@ -892,13 +901,11 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/App/APP.o
  .group         0x00000000        0x8 ./Sources/App/APP.o
  .group         0x00000000        0x8 ./Sources/App/APP.o
+ .group         0x00000000        0x8 ./Sources/App/APP.o
+ .group         0x00000000        0x8 ./Sources/App/APP.o
  .text          0x00000000        0x0 ./Sources/App/APP.o
  .data          0x00000000        0x0 ./Sources/App/APP.o
  .bss           0x00000000        0x0 ./Sources/App/APP.o
- .text.ADC0_Init
-                0x00000000       0x40 ./Sources/App/APP.o
- .text.ADC0_Read
-                0x00000000       0x20 ./Sources/App/APP.o
  .debug_macro   0x00000000      0x802 ./Sources/App/APP.o
  .debug_macro   0x00000000       0x16 ./Sources/App/APP.o
  .debug_macro   0x00000000       0x16 ./Sources/App/APP.o
@@ -957,23 +964,26 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/main.o
  .debug_macro   0x00000000       0x6b ./Sources/main.o
  .debug_macro   0x00000000     0xd132 ./Sources/main.o
+ .debug_macro   0x00000000      0x166 ./Sources/main.o
+ .debug_macro   0x00000000       0x22 ./Sources/main.o
  .debug_macro   0x00000000       0x58 ./Sources/main.o
  .debug_macro   0x00000000       0x35 ./Sources/main.o
  .debug_macro   0x00000000       0xa3 ./Sources/main.o
- .debug_macro   0x00000000      0x166 ./Sources/main.o
+ .debug_macro   0x00000000       0x16 ./Sources/main.o
+ .debug_macro   0x00000000       0x35 ./Sources/main.o
+ .debug_macro   0x00000000       0x10 ./Sources/main.o
  .debug_macro   0x00000000       0x52 ./Sources/main.o
  .debug_macro   0x00000000       0x16 ./Sources/main.o
  .debug_macro   0x00000000       0x43 ./Sources/main.o
  .debug_macro   0x00000000      0x180 ./Sources/main.o
- .debug_macro   0x00000000       0x35 ./Sources/main.o
- .debug_macro   0x00000000       0x22 ./Sources/main.o
- .debug_macro   0x00000000       0x10 ./Sources/main.o
  .debug_macro   0x00000000       0x10 ./Sources/main.o
  .debug_macro   0x00000000       0x22 ./Sources/main.o
  .debug_macro   0x00000000       0xbd ./Sources/main.o
  .debug_macro   0x00000000       0x16 ./Sources/main.o
  .debug_macro   0x00000000      0x14a ./Sources/main.o
- .debug_macro   0x00000000       0x16 ./Sources/main.o
+ .debug_macro   0x00000000      0x2a6 ./Sources/main.o
+ .debug_macro   0x00000000       0x10 ./Sources/main.o
+ .debug_macro   0x00000000       0x34 ./Sources/main.o
  .data          0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MKL46Z4.o
@@ -1149,7 +1159,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
  .FlashConfig   0x00000400       0x10 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410      0xd58
+.text           0x00000410      0xddc
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410       0x60 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
@@ -1180,6 +1190,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x00000514                UART2_IRQHandler
                 0x00000514                Reserved20_IRQHandler
                 0x00000514                USB0_IRQHandler
+                0x00000514                PIT_IRQHandler
                 0x00000514                SVC_Handler
                 0x00000514                DMA3_IRQHandler
                 0x00000514                DMA0_IRQHandler
@@ -1210,211 +1221,221 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
  .text.HAL_UART_C2_RE
                 0x000005d8       0x30 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
                 0x000005d8                HAL_UART_C2_RE
+ .text.HAL_UART_data
+                0x00000608       0x1c ./Sources/HAL/HAL_UART/HAL_UART_D.o
+                0x00000608                HAL_UART_data
+ .text.HAL_UART_data_assign
+                0x00000624       0x1c ./Sources/HAL/HAL_UART/HAL_UART_D.o
+                0x00000624                HAL_UART_data_assign
+ .text.HAL_UART_S1_TC
+                0x00000640       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+                0x00000640                HAL_UART_S1_TC
+ .text.HAL_UART_S1_RDRF
+                0x00000664       0x24 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+                0x00000664                HAL_UART_S1_RDRF
  .text.HAL_ADC0_dataReturn
-                0x00000608       0x14 ./Sources/HAL/HAL_ADC.o
-                0x00000608                HAL_ADC0_dataReturn
+                0x00000688       0x14 ./Sources/HAL/HAL_ADC.o
+                0x00000688                HAL_ADC0_dataReturn
  .text.HAL_GPIO_Init
-                0x0000061c       0x4c ./Sources/HAL/HAL_GPIO.o
-                0x0000061c                HAL_GPIO_Init
+                0x0000069c       0x4c ./Sources/HAL/HAL_GPIO.o
+                0x0000069c                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x00000668       0x4c ./Sources/HAL/HAL_GPIO.o
-                0x00000668                HAL_GPIO_WritePin
+                0x000006e8       0x4c ./Sources/HAL/HAL_GPIO.o
+                0x000006e8                HAL_GPIO_WritePin
+ .text.HAL_GPIO_PinStatus
+                0x00000734       0x28 ./Sources/HAL/HAL_GPIO.o
+                0x00000734                HAL_GPIO_PinStatus
  .text.NVIC_EnableIRQ
-                0x000006b4       0x2c ./Sources/HAL/HAL_NVIC.o
+                0x0000075c       0x2c ./Sources/HAL/HAL_NVIC.o
  .text.HAL_EnableIRQ
-                0x000006e0       0x20 ./Sources/HAL/HAL_NVIC.o
-                0x000006e0                HAL_EnableIRQ
- .text.HAL_PIT_timer_clear_flag
-                0x00000700       0x40 ./Sources/HAL/HAL_PIT.o
-                0x00000700                HAL_PIT_timer_clear_flag
- .text.HAL_PIT_timer_flag_isSet
-                0x00000740       0x34 ./Sources/HAL/HAL_PIT.o
-                0x00000740                HAL_PIT_timer_flag_isSet
+                0x00000788       0x20 ./Sources/HAL/HAL_NVIC.o
+                0x00000788                HAL_EnableIRQ
  .text.HAL_PORT_Init
-                0x00000774       0x48 ./Sources/HAL/HAL_PORT.o
-                0x00000774                HAL_PORT_Init
+                0x000007a8       0x48 ./Sources/HAL/HAL_PORT.o
+                0x000007a8                HAL_PORT_Init
  .text.HAL_SIM_SOPT2_EnableClock
-                0x000007bc       0x28 ./Sources/HAL/HAL_SIM.o
-                0x000007bc                HAL_SIM_SOPT2_EnableClock
+                0x000007f0       0x28 ./Sources/HAL/HAL_SIM.o
+                0x000007f0                HAL_SIM_SOPT2_EnableClock
  .text.HAL_SIM_SCGC4_EnableClock
-                0x000007e4       0x28 ./Sources/HAL/HAL_SIM.o
-                0x000007e4                HAL_SIM_SCGC4_EnableClock
+                0x00000818       0x28 ./Sources/HAL/HAL_SIM.o
+                0x00000818                HAL_SIM_SCGC4_EnableClock
  .text.HAL_SIM_SCGC5_EnableClock
-                0x0000080c       0x2c ./Sources/HAL/HAL_SIM.o
-                0x0000080c                HAL_SIM_SCGC5_EnableClock
+                0x00000840       0x2c ./Sources/HAL/HAL_SIM.o
+                0x00000840                HAL_SIM_SCGC5_EnableClock
  .text.DRIVER_GPIO_Init
-                0x00000838       0x28 ./Sources/DRIVER/DRIVER_GPIO.o
-                0x00000838                DRIVER_GPIO_Init
+                0x0000086c       0x28 ./Sources/DRIVER/DRIVER_GPIO.o
+                0x0000086c                DRIVER_GPIO_Init
  .text.DRIVER_GPIO_WritePin
-                0x00000860       0x28 ./Sources/DRIVER/DRIVER_GPIO.o
-                0x00000860                DRIVER_GPIO_WritePin
+                0x00000894       0x28 ./Sources/DRIVER/DRIVER_GPIO.o
+                0x00000894                DRIVER_GPIO_WritePin
+ .text.DRIVER_GPIO_PinStatus
+                0x000008bc       0x20 ./Sources/DRIVER/DRIVER_GPIO.o
+                0x000008bc                DRIVER_GPIO_PinStatus
  .text.DRIVER_NVIC_EnableIRQ
-                0x00000888       0x20 ./Sources/DRIVER/DRIVER_NVIC.o
-                0x00000888                DRIVER_NVIC_EnableIRQ
- .text.PIT_IRQHandler
-                0x000008a8       0x5c ./Sources/DRIVER/DRIVER_NVIC.o
-                0x000008a8                PIT_IRQHandler
- .text.DRIVER_PIT_timer_clear_flag
-                0x00000904       0x1c ./Sources/DRIVER/DRIVER_PIT.o
-                0x00000904                DRIVER_PIT_timer_clear_flag
- .text.DRIVER_PIT_timer_flag_isSet
-                0x00000920       0x20 ./Sources/DRIVER/DRIVER_PIT.o
-                0x00000920                DRIVER_PIT_timer_flag_isSet
+                0x000008dc       0x20 ./Sources/DRIVER/DRIVER_NVIC.o
+                0x000008dc                DRIVER_NVIC_EnableIRQ
  .text.DRIVER_PORT_Init
-                0x00000940       0x28 ./Sources/DRIVER/DRIVER_PORT.o
-                0x00000940                DRIVER_PORT_Init
+                0x000008fc       0x28 ./Sources/DRIVER/DRIVER_PORT.o
+                0x000008fc                DRIVER_PORT_Init
  .text.ADC0_IRQHandler
-                0x00000968       0x18 ./Sources/DRIVER/DRIVER_PORT.o
-                0x00000968                ADC0_IRQHandler
+                0x00000924       0x18 ./Sources/DRIVER/DRIVER_PORT.o
+                0x00000924                ADC0_IRQHandler
  .text.DRIVER_SIM_SOPT2_EnableClock
-                0x00000980       0x18 ./Sources/DRIVER/DRIVER_SIM.o
-                0x00000980                DRIVER_SIM_SOPT2_EnableClock
+                0x0000093c       0x18 ./Sources/DRIVER/DRIVER_SIM.o
+                0x0000093c                DRIVER_SIM_SOPT2_EnableClock
  .text.DRIVER_SIM_SCGC4_EnableClock
-                0x00000998       0x18 ./Sources/DRIVER/DRIVER_SIM.o
-                0x00000998                DRIVER_SIM_SCGC4_EnableClock
+                0x00000954       0x18 ./Sources/DRIVER/DRIVER_SIM.o
+                0x00000954                DRIVER_SIM_SCGC4_EnableClock
  .text.DRIVER_SIM_SCGC5_EnableClock
-                0x000009b0       0x1c ./Sources/DRIVER/DRIVER_SIM.o
-                0x000009b0                DRIVER_SIM_SCGC5_EnableClock
+                0x0000096c       0x1c ./Sources/DRIVER/DRIVER_SIM.o
+                0x0000096c                DRIVER_SIM_SCGC5_EnableClock
  .text.SysTick_Handler
-                0x000009cc       0x2c ./Sources/DRIVER/DRIVER_Systick.o
-                0x000009cc                SysTick_Handler
+                0x00000988       0x2c ./Sources/DRIVER/DRIVER_Systick.o
+                0x00000988                SysTick_Handler
  .text.DRIVER_UART_BDH
-                0x000009f8       0x24 ./Sources/DRIVER/DRIVER_UART.o
-                0x000009f8                DRIVER_UART_BDH
+                0x000009b4       0x24 ./Sources/DRIVER/DRIVER_UART.o
+                0x000009b4                DRIVER_UART_BDH
  .text.DRIVER_UART_BDL
-                0x00000a1c       0x24 ./Sources/DRIVER/DRIVER_UART.o
-                0x00000a1c                DRIVER_UART_BDL
+                0x000009d8       0x24 ./Sources/DRIVER/DRIVER_UART.o
+                0x000009d8                DRIVER_UART_BDL
  .text.DRIVER_UART_C2
-                0x00000a40       0x34 ./Sources/DRIVER/DRIVER_UART.o
-                0x00000a40                DRIVER_UART_C2
+                0x000009fc       0x34 ./Sources/DRIVER/DRIVER_UART.o
+                0x000009fc                DRIVER_UART_C2
+ .text.DRIVER_UART_C2_interruptStatus
+                0x00000a30       0x24 ./Sources/DRIVER/DRIVER_UART.o
+                0x00000a30                DRIVER_UART_C2_interruptStatus
  .text.Init_LED_Green
-                0x00000a74       0x44 ./Sources/App/APP.o
-                0x00000a74                Init_LED_Green
+                0x00000a54       0x44 ./Sources/App/APP.o
+                0x00000a54                Init_LED_Green
  .text.Init_LED_Red
-                0x00000ab8       0x44 ./Sources/App/APP.o
-                0x00000ab8                Init_LED_Red
- .text.init_clk_and_pin_UART0
-                0x00000afc       0x50 ./Sources/main.o
-                0x00000afc                init_clk_and_pin_UART0
+                0x00000a98       0x44 ./Sources/App/APP.o
+                0x00000a98                Init_LED_Red
  .text.init_UART0
-                0x00000b4c       0x48 ./Sources/main.o
-                0x00000b4c                init_UART0
- .text.send_bytes
-                0x00000b94       0x30 ./Sources/main.o
-                0x00000b94                send_bytes
- .text.send_string
-                0x00000bc4       0x28 ./Sources/main.o
-                0x00000bc4                send_string
+                0x00000adc       0x90 ./Sources/App/APP.o
+                0x00000adc                init_UART0
+ .text.UART0_SendChar
+                0x00000b6c       0x3c ./Sources/App/APP.o
  .text.UART0_GetChar
-                0x00000bec       0x28 ./Sources/main.o
-                0x00000bec                UART0_GetChar
- .text.get_string
-                0x00000c14       0x58 ./Sources/main.o
-                0x00000c14                get_string
- .text.process_command
-                0x00000c6c      0x1c0 ./Sources/main.o
-                0x00000c6c                process_command
+                0x00000ba8       0x30 ./Sources/App/APP.o
+ .text.UART0_get_CMD
+                0x00000bd8       0xe0 ./Sources/App/APP.o
+ .text.led_status_command
+                0x00000cb8       0x74 ./Sources/App/APP.o
+ .text.UART0_command_help
+                0x00000d2c       0x5c ./Sources/App/APP.o
+                0x00000d2c                UART0_command_help
+ .text.UART0_send_string
+                0x00000d88       0x28 ./Sources/App/APP.o
+                0x00000d88                UART0_send_string
+ .text.UART0_get_string
+                0x00000db0       0x74 ./Sources/App/APP.o
+                0x00000db0                UART0_get_string
+ .text.UART0_access_command
+                0x00000e24       0xc8 ./Sources/App/APP.o
+                0x00000e24                UART0_access_command
  .text.UART0_IRQHandler
-                0x00000e2c       0x24 ./Sources/main.o
-                0x00000e2c                UART0_IRQHandler
- .text.main     0x00000e50       0x6c ./Sources/main.o
-                0x00000e50                main
+                0x00000eec       0x20 ./Sources/main.o
+                0x00000eec                UART0_IRQHandler
+ .text.main     0x00000f0c       0x18 ./Sources/main.o
+                0x00000f0c                main
  .text.SystemInit
-                0x00000ebc       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
-                0x00000ebc                SystemInit
- .text.exit     0x00000ed4       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
-                0x00000ed4                exit
+                0x00000f24       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+                0x00000f24                SystemInit
+ .text.exit     0x00000f3c       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+                0x00000f3c                exit
  .text.__libc_init_array
-                0x00000f00       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
-                0x00000f00                __libc_init_array
- .text.memset   0x00000f4c       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
-                0x00000f4c                memset
- .text._exit    0x00000f5c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
-                0x00000f5c                _exit
+                0x00000f68       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x00000f68                __libc_init_array
+ .text.memset   0x00000fb4       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x00000fb4                memset
+ .text._exit    0x00000fc4        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
+                0x00000fc4                _exit
  *(.rodata)
- .rodata        0x00000f60      0x1e8 ./Sources/main.o
+ .rodata        0x00000fc8      0x1e8 ./Sources/App/APP.o
  *(.rodata*)
+ .rodata.UART0_access_command
+                0x000011b0       0x1c ./Sources/App/APP.o
  .rodata.str1.1
-                0x00001148        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
- *fill*         0x0000114a        0x2 
+                0x000011cc        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+ *fill*         0x000011ce        0x2 
  .rodata._global_impure_ptr
-                0x0000114c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
-                0x0000114c                _global_impure_ptr
+                0x000011d0        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x000011d0                _global_impure_ptr
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00001150        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .eh_frame      0x000011d4        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(.init)
- .init          0x00001150        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x00001150                _init
- .init          0x00001154        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+ .init          0x000011d4        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x000011d4                _init
+ .init          0x000011d8        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
  *(.fini)
- .fini          0x0000115c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x0000115c                _fini
- .fini          0x00001160        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x00001168                . = ALIGN (0x4)
+ .fini          0x000011e0        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x000011e0                _fini
+ .fini          0x000011e4        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x000011ec                . = ALIGN (0x4)
 
-.vfp11_veneer   0x00001168        0x0
+.vfp11_veneer   0x000011ec        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00001168        0x0
+.v4_bx          0x000011ec        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001168        0x0
+.iplt           0x000011ec        0x0
  .iplt          0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00001168        0x8
-                0x00001168                __exidx_start = .
+.ARM            0x000011ec        0x8
+                0x000011ec                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x00001168        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
-                0x00001170                __exidx_end = .
+ .ARM.exidx     0x000011ec        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+                0x000011f4                __exidx_end = .
 
-.rel.dyn        0x00001170        0x0
+.rel.dyn        0x000011f4        0x0
  .rel.iplt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.ctors          0x00001170        0x0
-                0x00001170                __CTOR_LIST__ = .
+.ctors          0x000011f4        0x0
+                0x000011f4                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00001170                __CTOR_END__ = .
+                0x000011f4                __CTOR_END__ = .
 
-.dtors          0x00001170        0x0
-                0x00001170                __DTOR_LIST__ = .
+.dtors          0x000011f4        0x0
+                0x000011f4                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00001170                __DTOR_END__ = .
+                0x000011f4                __DTOR_END__ = .
 
-.preinit_array  0x00001170        0x0
-                0x00001170                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000011f4        0x0
+                0x000011f4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00001170                PROVIDE (__preinit_array_end, .)
+                0x000011f4                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00001170        0x4
-                0x00001170                PROVIDE (__init_array_start, .)
+.init_array     0x000011f4        0x4
+                0x000011f4                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x00001170        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
-                0x00001174                PROVIDE (__init_array_end, .)
+ .init_array    0x000011f4        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+                0x000011f8                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00001174        0x4
-                0x00001174                PROVIDE (__fini_array_start, .)
+.fini_array     0x000011f8        0x4
+                0x000011f8                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00001174        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
-                0x00001178                PROVIDE (__fini_array_end, .)
-                0x00001178                __etext = .
-                0x00001178                __DATA_ROM = .
+ .fini_array    0x000011f8        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+                0x000011fc                PROVIDE (__fini_array_end, .)
+                0x000011fc                __etext = .
+                0x000011fc                __DATA_ROM = .
 
 .mtb            0x1fffe000        0x0
                 0x1fffe000                . = ALIGN (0x8)
@@ -1423,7 +1444,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x1fffe000                . = ALIGN (0x8)
                 0x1fffe000                _mtb_end = .
 
-.data           0x1fffe000       0x64 load address 0x00001178
+.data           0x1fffe000       0x64 load address 0x000011fc
                 0x1fffe000                . = ALIGN (0x4)
                 0x1fffe000                __DATA_RAM = .
                 0x1fffe000                __data_start__ = .
@@ -1436,53 +1457,46 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
  .jcr           0x1fffe060        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
                 0x1fffe064                . = ALIGN (0x4)
                 0x1fffe064                __data_end__ = .
-                0x000011dc                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x00001260                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
 
-.igot.plt       0x1fffe064        0x0 load address 0x000011dc
+.igot.plt       0x1fffe064        0x0 load address 0x00001260
  .igot.plt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.bss            0x1fffe064      0x128 load address 0x000011dc
+.bss            0x1fffe064      0x120 load address 0x00001260
                 0x1fffe064                . = ALIGN (0x4)
                 0x1fffe064                __START_BSS = .
                 0x1fffe064                __bss_start__ = .
  *(.bss)
  .bss           0x1fffe064       0x1c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(.bss*)
- .bss.PIT0_callback
-                0x1fffe080        0x4 ./Sources/DRIVER/DRIVER_NVIC.o
-                0x1fffe080                PIT0_callback
- .bss.PIT1_callback
-                0x1fffe084        0x4 ./Sources/DRIVER/DRIVER_NVIC.o
-                0x1fffe084                PIT1_callback
- .bss.PIT0_interruptFlag
-                0x1fffe088        0x1 ./Sources/DRIVER/DRIVER_NVIC.o
-                0x1fffe088                PIT0_interruptFlag
  .bss.countFlag
-                0x1fffe089        0x1 ./Sources/DRIVER/DRIVER_Systick.o
-                0x1fffe089                countFlag
+                0x1fffe080        0x1 ./Sources/DRIVER/DRIVER_Systick.o
+                0x1fffe080                countFlag
  *(COMMON)
- COMMON         0x1fffe08a        0x2 ./Sources/DRIVER/DRIVER_PORT.o
-                0x1fffe08a                adc_value
- COMMON         0x1fffe08c      0x100 ./Sources/main.o
-                0x1fffe08c                commandBuffer
-                0x1fffe18c                . = ALIGN (0x4)
-                0x1fffe18c                __bss_end__ = .
-                0x1fffe18c                __END_BSS = .
+ *fill*         0x1fffe081        0x1 
+ COMMON         0x1fffe082        0x2 ./Sources/DRIVER/DRIVER_PORT.o
+                0x1fffe082                adc_value
+ COMMON         0x1fffe084       0xff ./Sources/App/APP.o
+                0x1fffe084                commandBuffer
+                0x1fffe184                . = ALIGN (0x4)
+ *fill*         0x1fffe183        0x1 
+                0x1fffe184                __bss_end__ = .
+                0x1fffe184                __END_BSS = .
 
-.heap           0x1fffe18c      0x404 load address 0x00001304
-                0x1fffe190                . = ALIGN (0x8)
- *fill*         0x1fffe18c        0x4 
-                0x1fffe190                __end__ = .
-                0x1fffe190                PROVIDE (end, .)
-                0x1fffe190                __HeapBase = .
-                0x1fffe590                . = (. + HEAP_SIZE)
- *fill*         0x1fffe190      0x400 
-                0x1fffe590                __HeapLimit = .
+.heap           0x1fffe184      0x404 load address 0x00001380
+                0x1fffe188                . = ALIGN (0x8)
+ *fill*         0x1fffe184        0x4 
+                0x1fffe188                __end__ = .
+                0x1fffe188                PROVIDE (end, .)
+                0x1fffe188                __HeapBase = .
+                0x1fffe588                . = (. + HEAP_SIZE)
+ *fill*         0x1fffe188      0x400 
+                0x1fffe588                __HeapLimit = .
 
-.stack          0x1fffe590      0x400 load address 0x00001708
-                0x1fffe590                . = ALIGN (0x8)
-                0x1fffe990                . = (. + STACK_SIZE)
- *fill*         0x1fffe590      0x400 
+.stack          0x1fffe588      0x400 load address 0x00001784
+                0x1fffe588                . = ALIGN (0x8)
+                0x1fffe988                . = (. + STACK_SIZE)
+ *fill*         0x1fffe588      0x400 
                 0x20006000                __StackTop = (ORIGIN (m_data) + 0x8000)
                 0x20005c00                __StackLimit = (__StackTop - STACK_SIZE)
                 0x20006000                PROVIDE (__stack, __StackTop)
@@ -1503,23 +1517,23 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
  .ARM.attributes
                 0x000000c9       0x32 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
  .ARM.attributes
-                0x000000fb       0x32 ./Sources/HAL/HAL_ADC.o
+                0x000000fb       0x32 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .ARM.attributes
-                0x0000012d       0x32 ./Sources/HAL/HAL_GPIO.o
+                0x0000012d       0x32 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .ARM.attributes
-                0x0000015f       0x32 ./Sources/HAL/HAL_NVIC.o
+                0x0000015f       0x32 ./Sources/HAL/HAL_ADC.o
  .ARM.attributes
-                0x00000191       0x32 ./Sources/HAL/HAL_PIT.o
+                0x00000191       0x32 ./Sources/HAL/HAL_GPIO.o
  .ARM.attributes
-                0x000001c3       0x32 ./Sources/HAL/HAL_PORT.o
+                0x000001c3       0x32 ./Sources/HAL/HAL_NVIC.o
  .ARM.attributes
-                0x000001f5       0x32 ./Sources/HAL/HAL_SIM.o
+                0x000001f5       0x32 ./Sources/HAL/HAL_PORT.o
  .ARM.attributes
-                0x00000227       0x32 ./Sources/DRIVER/DRIVER_GPIO.o
+                0x00000227       0x32 ./Sources/HAL/HAL_SIM.o
  .ARM.attributes
-                0x00000259       0x32 ./Sources/DRIVER/DRIVER_NVIC.o
+                0x00000259       0x32 ./Sources/DRIVER/DRIVER_GPIO.o
  .ARM.attributes
-                0x0000028b       0x32 ./Sources/DRIVER/DRIVER_PIT.o
+                0x0000028b       0x32 ./Sources/DRIVER/DRIVER_NVIC.o
  .ARM.attributes
                 0x000002bd       0x32 ./Sources/DRIVER/DRIVER_PORT.o
  .ARM.attributes
@@ -1555,51 +1569,51 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x3d65
+.debug_info     0x00000000     0x38db
  .debug_info    0x00000000      0x24d ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_info    0x0000024d      0x168 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_info    0x000003b5      0x381 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_info    0x00000736      0x3e2 ./Sources/HAL/HAL_ADC.o
- .debug_info    0x00000b18      0x219 ./Sources/HAL/HAL_GPIO.o
- .debug_info    0x00000d31      0x3fd ./Sources/HAL/HAL_NVIC.o
- .debug_info    0x0000112e      0x35b ./Sources/HAL/HAL_PIT.o
- .debug_info    0x00001489      0x351 ./Sources/HAL/HAL_PORT.o
- .debug_info    0x000017da      0x41f ./Sources/HAL/HAL_SIM.o
- .debug_info    0x00001bf9      0x1da ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_info    0x00001dd3      0x2a8 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_info    0x0000207b      0x288 ./Sources/DRIVER/DRIVER_PIT.o
- .debug_info    0x00002303      0x3a3 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_info    0x000026a6      0x27d ./Sources/DRIVER/DRIVER_SIM.o
- .debug_info    0x00002923      0x211 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_info    0x00002b34      0x234 ./Sources/DRIVER/DRIVER_UART.o
- .debug_info    0x00002d68      0x524 ./Sources/App/APP.o
- .debug_info    0x0000328c      0x640 ./Sources/main.o
- .debug_info    0x000038cc       0xab ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_info    0x00003977      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_info    0x00000736      0x17d ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_info    0x000008b3      0x263 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_info    0x00000b16      0x3e2 ./Sources/HAL/HAL_ADC.o
+ .debug_info    0x00000ef8      0x25a ./Sources/HAL/HAL_GPIO.o
+ .debug_info    0x00001152      0x3fd ./Sources/HAL/HAL_NVIC.o
+ .debug_info    0x0000154f      0x351 ./Sources/HAL/HAL_PORT.o
+ .debug_info    0x000018a0      0x41f ./Sources/HAL/HAL_SIM.o
+ .debug_info    0x00001cbf      0x21b ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_info    0x00001eda      0x236 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_info    0x00002110      0x3a3 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_info    0x000024b3      0x27d ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_info    0x00002730      0x211 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_info    0x00002941      0x2ab ./Sources/DRIVER/DRIVER_UART.o
+ .debug_info    0x00002bec      0x6ec ./Sources/App/APP.o
+ .debug_info    0x000032d8      0x16a ./Sources/main.o
+ .debug_info    0x00003442       0xab ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_info    0x000034ed      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_abbrev   0x00000000     0x133d
+.debug_abbrev   0x00000000     0x12aa
  .debug_abbrev  0x00000000       0xe2 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_abbrev  0x000000e2       0xb2 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_abbrev  0x00000194       0xd3 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_abbrev  0x00000267      0x105 ./Sources/HAL/HAL_ADC.o
- .debug_abbrev  0x0000036c       0xef ./Sources/HAL/HAL_GPIO.o
- .debug_abbrev  0x0000045b      0x13d ./Sources/HAL/HAL_NVIC.o
- .debug_abbrev  0x00000598      0x10b ./Sources/HAL/HAL_PIT.o
- .debug_abbrev  0x000006a3      0x125 ./Sources/HAL/HAL_PORT.o
- .debug_abbrev  0x000007c8       0xf4 ./Sources/HAL/HAL_SIM.o
- .debug_abbrev  0x000008bc       0xe0 ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_abbrev  0x0000099c       0xce ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_abbrev  0x00000a6a       0x97 ./Sources/DRIVER/DRIVER_PIT.o
- .debug_abbrev  0x00000b01      0x146 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_abbrev  0x00000c47       0x93 ./Sources/DRIVER/DRIVER_SIM.o
- .debug_abbrev  0x00000cda      0x167 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_abbrev  0x00000e41       0xe2 ./Sources/DRIVER/DRIVER_UART.o
- .debug_abbrev  0x00000f23      0x14d ./Sources/App/APP.o
- .debug_abbrev  0x00001070      0x1b0 ./Sources/main.o
- .debug_abbrev  0x00001220       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_abbrev  0x00001234      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_abbrev  0x00000267       0xbd ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_abbrev  0x00000324       0xbf ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_abbrev  0x000003e3      0x105 ./Sources/HAL/HAL_ADC.o
+ .debug_abbrev  0x000004e8       0xf3 ./Sources/HAL/HAL_GPIO.o
+ .debug_abbrev  0x000005db      0x13d ./Sources/HAL/HAL_NVIC.o
+ .debug_abbrev  0x00000718      0x125 ./Sources/HAL/HAL_PORT.o
+ .debug_abbrev  0x0000083d       0xf4 ./Sources/HAL/HAL_SIM.o
+ .debug_abbrev  0x00000931       0xe4 ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_abbrev  0x00000a15       0x9c ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_abbrev  0x00000ab1      0x146 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_abbrev  0x00000bf7       0x93 ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_abbrev  0x00000c8a      0x167 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_abbrev  0x00000df1       0xe2 ./Sources/DRIVER/DRIVER_UART.o
+ .debug_abbrev  0x00000ed3      0x1d8 ./Sources/App/APP.o
+ .debug_abbrev  0x000010ab       0xe2 ./Sources/main.o
+ .debug_abbrev  0x0000118d       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_abbrev  0x000011a1      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_aranges  0x00000000      0x4a0
+.debug_aranges  0x00000000      0x490
  .debug_aranges
                 0x00000000       0x38 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_aranges
@@ -1607,62 +1621,62 @@ OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
  .debug_aranges
                 0x00000058       0x58 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
  .debug_aranges
-                0x000000b0       0x38 ./Sources/HAL/HAL_ADC.o
+                0x000000b0       0x28 ./Sources/HAL/HAL_UART/HAL_UART_D.o
  .debug_aranges
-                0x000000e8       0x30 ./Sources/HAL/HAL_GPIO.o
+                0x000000d8       0x58 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .debug_aranges
-                0x00000118       0x38 ./Sources/HAL/HAL_NVIC.o
+                0x00000130       0x38 ./Sources/HAL/HAL_ADC.o
  .debug_aranges
-                0x00000150       0x48 ./Sources/HAL/HAL_PIT.o
+                0x00000168       0x38 ./Sources/HAL/HAL_GPIO.o
  .debug_aranges
-                0x00000198       0x48 ./Sources/HAL/HAL_PORT.o
+                0x000001a0       0x38 ./Sources/HAL/HAL_NVIC.o
  .debug_aranges
-                0x000001e0       0x38 ./Sources/HAL/HAL_SIM.o
+                0x000001d8       0x48 ./Sources/HAL/HAL_PORT.o
  .debug_aranges
-                0x00000218       0x30 ./Sources/DRIVER/DRIVER_GPIO.o
+                0x00000220       0x38 ./Sources/HAL/HAL_SIM.o
  .debug_aranges
-                0x00000248       0x40 ./Sources/DRIVER/DRIVER_NVIC.o
+                0x00000258       0x38 ./Sources/DRIVER/DRIVER_GPIO.o
  .debug_aranges
-                0x00000288       0x48 ./Sources/DRIVER/DRIVER_PIT.o
+                0x00000290       0x28 ./Sources/DRIVER/DRIVER_NVIC.o
  .debug_aranges
-                0x000002d0       0x50 ./Sources/DRIVER/DRIVER_PORT.o
+                0x000002b8       0x50 ./Sources/DRIVER/DRIVER_PORT.o
  .debug_aranges
-                0x00000320       0x38 ./Sources/DRIVER/DRIVER_SIM.o
+                0x00000308       0x38 ./Sources/DRIVER/DRIVER_SIM.o
  .debug_aranges
-                0x00000358       0x38 ./Sources/DRIVER/DRIVER_Systick.o
+                0x00000340       0x38 ./Sources/DRIVER/DRIVER_Systick.o
  .debug_aranges
-                0x00000390       0x30 ./Sources/DRIVER/DRIVER_UART.o
+                0x00000378       0x38 ./Sources/DRIVER/DRIVER_UART.o
  .debug_aranges
-                0x000003c0       0x38 ./Sources/App/APP.o
+                0x000003b0       0x70 ./Sources/App/APP.o
  .debug_aranges
-                0x000003f8       0x60 ./Sources/main.o
+                0x00000420       0x28 ./Sources/main.o
  .debug_aranges
-                0x00000458       0x20 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+                0x00000448       0x20 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .debug_aranges
-                0x00000478       0x28 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+                0x00000468       0x28 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_ranges   0x00000000      0x350
+.debug_ranges   0x00000000      0x340
  .debug_ranges  0x00000000       0x28 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_ranges  0x00000028       0x10 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_ranges  0x00000038       0x48 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_ranges  0x00000080       0x28 ./Sources/HAL/HAL_ADC.o
- .debug_ranges  0x000000a8       0x20 ./Sources/HAL/HAL_GPIO.o
- .debug_ranges  0x000000c8       0x28 ./Sources/HAL/HAL_NVIC.o
- .debug_ranges  0x000000f0       0x38 ./Sources/HAL/HAL_PIT.o
- .debug_ranges  0x00000128       0x38 ./Sources/HAL/HAL_PORT.o
- .debug_ranges  0x00000160       0x28 ./Sources/HAL/HAL_SIM.o
- .debug_ranges  0x00000188       0x20 ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_ranges  0x000001a8       0x30 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_ranges  0x000001d8       0x38 ./Sources/DRIVER/DRIVER_PIT.o
- .debug_ranges  0x00000210       0x40 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_ranges  0x00000250       0x28 ./Sources/DRIVER/DRIVER_SIM.o
- .debug_ranges  0x00000278       0x28 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_ranges  0x000002a0       0x20 ./Sources/DRIVER/DRIVER_UART.o
- .debug_ranges  0x000002c0       0x28 ./Sources/App/APP.o
- .debug_ranges  0x000002e8       0x50 ./Sources/main.o
- .debug_ranges  0x00000338       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_ranges  0x00000080       0x18 ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_ranges  0x00000098       0x48 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_ranges  0x000000e0       0x28 ./Sources/HAL/HAL_ADC.o
+ .debug_ranges  0x00000108       0x28 ./Sources/HAL/HAL_GPIO.o
+ .debug_ranges  0x00000130       0x28 ./Sources/HAL/HAL_NVIC.o
+ .debug_ranges  0x00000158       0x38 ./Sources/HAL/HAL_PORT.o
+ .debug_ranges  0x00000190       0x28 ./Sources/HAL/HAL_SIM.o
+ .debug_ranges  0x000001b8       0x28 ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_ranges  0x000001e0       0x18 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_ranges  0x000001f8       0x40 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_ranges  0x00000238       0x28 ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_ranges  0x00000260       0x28 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_ranges  0x00000288       0x28 ./Sources/DRIVER/DRIVER_UART.o
+ .debug_ranges  0x000002b0       0x60 ./Sources/App/APP.o
+ .debug_ranges  0x00000310       0x18 ./Sources/main.o
+ .debug_ranges  0x00000328       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_macro    0x00000000     0xf9ac
+.debug_macro    0x00000000     0xfaa7
  .debug_macro   0x00000000       0x8d ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_macro   0x0000008d      0x802 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_macro   0x0000088f       0x16 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
@@ -1677,103 +1691,103 @@ OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
  .debug_macro   0x00000f13     0xd132 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_macro   0x0000e045       0x8d ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_macro   0x0000e0d2       0x8d ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_macro   0x0000e15f       0x96 ./Sources/HAL/HAL_ADC.o
- .debug_macro   0x0000e1f5       0x9b ./Sources/HAL/HAL_GPIO.o
- .debug_macro   0x0000e290       0x95 ./Sources/HAL/HAL_NVIC.o
- .debug_macro   0x0000e325       0x96 ./Sources/HAL/HAL_PIT.o
- .debug_macro   0x0000e3bb       0x8d ./Sources/HAL/HAL_PORT.o
- .debug_macro   0x0000e448       0x8d ./Sources/HAL/HAL_SIM.o
- .debug_macro   0x0000e4d5       0xa9 ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_macro   0x0000e57e       0xc5 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_macro   0x0000e643      0x166 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_macro   0x0000e7a9       0x9b ./Sources/DRIVER/DRIVER_PIT.o
- .debug_macro   0x0000e844       0xbb ./Sources/DRIVER/DRIVER_PORT.o
- .debug_macro   0x0000e8ff       0x9b ./Sources/DRIVER/DRIVER_SIM.o
- .debug_macro   0x0000e99a       0xbc ./Sources/DRIVER/DRIVER_Systick.o
- .debug_macro   0x0000ea56       0xc5 ./Sources/DRIVER/DRIVER_UART.o
- .debug_macro   0x0000eb1b      0x23f ./Sources/App/APP.o
- .debug_macro   0x0000ed5a       0x58 ./Sources/App/APP.o
- .debug_macro   0x0000edb2       0x35 ./Sources/App/APP.o
- .debug_macro   0x0000ede7       0xa3 ./Sources/App/APP.o
- .debug_macro   0x0000ee8a       0x16 ./Sources/App/APP.o
- .debug_macro   0x0000eea0       0x35 ./Sources/App/APP.o
- .debug_macro   0x0000eed5       0x10 ./Sources/App/APP.o
- .debug_macro   0x0000eee5       0x52 ./Sources/App/APP.o
- .debug_macro   0x0000ef37       0x16 ./Sources/App/APP.o
- .debug_macro   0x0000ef4d       0x43 ./Sources/App/APP.o
- .debug_macro   0x0000ef90      0x180 ./Sources/App/APP.o
- .debug_macro   0x0000f110       0x10 ./Sources/App/APP.o
- .debug_macro   0x0000f120       0x22 ./Sources/App/APP.o
- .debug_macro   0x0000f142       0xbd ./Sources/App/APP.o
- .debug_macro   0x0000f1ff       0x16 ./Sources/App/APP.o
- .debug_macro   0x0000f215      0x14a ./Sources/App/APP.o
- .debug_macro   0x0000f35f       0x16 ./Sources/App/APP.o
- .debug_macro   0x0000f375      0x2e7 ./Sources/main.o
- .debug_macro   0x0000f65c      0x2a6 ./Sources/main.o
- .debug_macro   0x0000f902       0x10 ./Sources/main.o
- .debug_macro   0x0000f912       0x1c ./Sources/main.o
- .debug_macro   0x0000f92e       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_macro   0x0000e15f       0x8d ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_macro   0x0000e1ec       0x96 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_macro   0x0000e282       0x22 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_macro   0x0000e2a4       0x96 ./Sources/HAL/HAL_ADC.o
+ .debug_macro   0x0000e33a       0xa4 ./Sources/HAL/HAL_GPIO.o
+ .debug_macro   0x0000e3de       0x95 ./Sources/HAL/HAL_NVIC.o
+ .debug_macro   0x0000e473       0x8d ./Sources/HAL/HAL_PORT.o
+ .debug_macro   0x0000e500       0x8d ./Sources/HAL/HAL_SIM.o
+ .debug_macro   0x0000e58d       0xb2 ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_macro   0x0000e63f       0xc5 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_macro   0x0000e704      0x166 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_macro   0x0000e86a       0xbb ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_macro   0x0000e925       0x9b ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_macro   0x0000e9c0       0xbc ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_macro   0x0000ea7c       0xea ./Sources/DRIVER/DRIVER_UART.o
+ .debug_macro   0x0000eb66      0x2fb ./Sources/App/APP.o
+ .debug_macro   0x0000ee61       0x58 ./Sources/App/APP.o
+ .debug_macro   0x0000eeb9       0x35 ./Sources/App/APP.o
+ .debug_macro   0x0000eeee       0xa3 ./Sources/App/APP.o
+ .debug_macro   0x0000ef91       0x16 ./Sources/App/APP.o
+ .debug_macro   0x0000efa7       0x35 ./Sources/App/APP.o
+ .debug_macro   0x0000efdc       0x10 ./Sources/App/APP.o
+ .debug_macro   0x0000efec       0x52 ./Sources/App/APP.o
+ .debug_macro   0x0000f03e       0x16 ./Sources/App/APP.o
+ .debug_macro   0x0000f054       0x43 ./Sources/App/APP.o
+ .debug_macro   0x0000f097      0x180 ./Sources/App/APP.o
+ .debug_macro   0x0000f217       0x10 ./Sources/App/APP.o
+ .debug_macro   0x0000f227       0x22 ./Sources/App/APP.o
+ .debug_macro   0x0000f249       0xbd ./Sources/App/APP.o
+ .debug_macro   0x0000f306       0x16 ./Sources/App/APP.o
+ .debug_macro   0x0000f31c      0x14a ./Sources/App/APP.o
+ .debug_macro   0x0000f466      0x2a6 ./Sources/App/APP.o
+ .debug_macro   0x0000f70c       0x10 ./Sources/App/APP.o
+ .debug_macro   0x0000f71c       0x34 ./Sources/App/APP.o
+ .debug_macro   0x0000f750      0x2d9 ./Sources/main.o
+ .debug_macro   0x0000fa29       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_line     0x00000000     0x32b3
+.debug_line     0x00000000     0x33ec
  .debug_line    0x00000000      0x243 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_line    0x00000243      0x212 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_line    0x00000455      0x285 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_line    0x000006da      0x23d ./Sources/HAL/HAL_ADC.o
- .debug_line    0x00000917      0x234 ./Sources/HAL/HAL_GPIO.o
- .debug_line    0x00000b4b      0x23b ./Sources/HAL/HAL_NVIC.o
- .debug_line    0x00000d86      0x262 ./Sources/HAL/HAL_PIT.o
- .debug_line    0x00000fe8      0x25a ./Sources/HAL/HAL_PORT.o
- .debug_line    0x00001242      0x22b ./Sources/HAL/HAL_SIM.o
- .debug_line    0x0000146d      0x25f ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_line    0x000016cc      0x2b1 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_line    0x0000197d      0x28c ./Sources/DRIVER/DRIVER_PIT.o
- .debug_line    0x00001c09      0x2c0 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_line    0x00001ec9      0x25f ./Sources/DRIVER/DRIVER_SIM.o
- .debug_line    0x00002128      0x2a3 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_line    0x000023cb      0x28f ./Sources/DRIVER/DRIVER_UART.o
- .debug_line    0x0000265a      0x408 ./Sources/App/APP.o
- .debug_line    0x00002a62      0x596 ./Sources/main.o
- .debug_line    0x00002ff8       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_line    0x00003073      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_line    0x000006da      0x21d ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_line    0x000008f7      0x294 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_line    0x00000b8b      0x23d ./Sources/HAL/HAL_ADC.o
+ .debug_line    0x00000dc8      0x253 ./Sources/HAL/HAL_GPIO.o
+ .debug_line    0x0000101b      0x23b ./Sources/HAL/HAL_NVIC.o
+ .debug_line    0x00001256      0x25a ./Sources/HAL/HAL_PORT.o
+ .debug_line    0x000014b0      0x22b ./Sources/HAL/HAL_SIM.o
+ .debug_line    0x000016db      0x27d ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_line    0x00001958      0x276 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_line    0x00001bce      0x2c0 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_line    0x00001e8e      0x25f ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_line    0x000020ed      0x2a3 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_line    0x00002390      0x2ce ./Sources/DRIVER/DRIVER_UART.o
+ .debug_line    0x0000265e      0x5ea ./Sources/App/APP.o
+ .debug_line    0x00002c48      0x4e9 ./Sources/main.o
+ .debug_line    0x00003131       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_line    0x000031ac      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_str      0x00000000    0x539d5
+.debug_str      0x00000000    0x5387b
  .debug_str     0x00000000    0x4f131 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
                               0x4f546 (size before relaxing)
  .debug_str     0x0004f131       0x4a ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
                               0x4f441 (size before relaxing)
  .debug_str     0x0004f17b      0x2ae ./Sources/HAL/HAL_UART/HAL_UART_C2.o
                               0x4f6b2 (size before relaxing)
- .debug_str     0x0004f429      0x2c3 ./Sources/HAL/HAL_ADC.o
+ .debug_str     0x0004f429       0x58 ./Sources/HAL/HAL_UART/HAL_UART_D.o
+                              0x4f445 (size before relaxing)
+ .debug_str     0x0004f481       0xfb ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+                              0x4f4e4 (size before relaxing)
+ .debug_str     0x0004f57c      0x282 ./Sources/HAL/HAL_ADC.o
                               0x4f6da (size before relaxing)
- .debug_str     0x0004f6ec      0x103 ./Sources/HAL/HAL_GPIO.o
-                              0x4f4d2 (size before relaxing)
- .debug_str     0x0004f7ef      0x297 ./Sources/HAL/HAL_NVIC.o
+ .debug_str     0x0004f7fe      0x116 ./Sources/HAL/HAL_GPIO.o
+                              0x4f531 (size before relaxing)
+ .debug_str     0x0004f914      0x297 ./Sources/HAL/HAL_NVIC.o
                               0x4f6a7 (size before relaxing)
- .debug_str     0x0004fa86      0x1de ./Sources/HAL/HAL_PIT.o
-                              0x4f66a (size before relaxing)
- .debug_str     0x0004fc64      0x1bb ./Sources/HAL/HAL_PORT.o
+ .debug_str     0x0004fbab      0x1bb ./Sources/HAL/HAL_PORT.o
                               0x4f5cb (size before relaxing)
- .debug_str     0x0004fe1f      0x345 ./Sources/HAL/HAL_SIM.o
+ .debug_str     0x0004fd66      0x350 ./Sources/HAL/HAL_SIM.o
                               0x4f758 (size before relaxing)
- .debug_str     0x00050164       0x80 ./Sources/DRIVER/DRIVER_GPIO.o
-                              0x4f4cd (size before relaxing)
- .debug_str     0x000501e4      0x36c ./Sources/DRIVER/DRIVER_NVIC.o
-                              0x4f9fa (size before relaxing)
- .debug_str     0x00050550      0x120 ./Sources/DRIVER/DRIVER_PIT.o
-                              0x4f694 (size before relaxing)
- .debug_str     0x00050670      0x158 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_str     0x000500b6       0x96 ./Sources/DRIVER/DRIVER_GPIO.o
+                              0x4f52f (size before relaxing)
+ .debug_str     0x0005014c      0x340 ./Sources/DRIVER/DRIVER_NVIC.o
+                              0x4f998 (size before relaxing)
+ .debug_str     0x0005048c      0x158 ./Sources/DRIVER/DRIVER_PORT.o
                               0x4f9c8 (size before relaxing)
- .debug_str     0x000507c8      0x1a1 ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_str     0x000505e4      0x1a1 ./Sources/DRIVER/DRIVER_SIM.o
                               0x4f794 (size before relaxing)
- .debug_str     0x00050969      0x177 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_str     0x00050785      0x17c ./Sources/DRIVER/DRIVER_Systick.o
                               0x4f8a6 (size before relaxing)
- .debug_str     0x00050ae0       0x99 ./Sources/DRIVER/DRIVER_UART.o
-                              0x4f55e (size before relaxing)
- .debug_str     0x00050b79     0x1d5c ./Sources/App/APP.o
-                              0x51a4e (size before relaxing)
- .debug_str     0x000528d5     0x1074 ./Sources/main.o
-                              0x52a73 (size before relaxing)
- .debug_str     0x00053949       0x8c ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_str     0x00050901       0xcd ./Sources/DRIVER/DRIVER_UART.o
+                              0x4f686 (size before relaxing)
+ .debug_str     0x000509ce     0x2df9 ./Sources/App/APP.o
+                              0x52b93 (size before relaxing)
+ .debug_str     0x000537c7       0x28 ./Sources/main.o
+                              0x52579 (size before relaxing)
+ .debug_str     0x000537ef       0x8c ./Project_Settings/Startup_Code/system_MKL46Z4.o
                               0x4f557 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1781,15 +1795,15 @@ OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
                                  0x71 (size before relaxing)
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
+ .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_ADC.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_GPIO.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_NVIC.o
- .comment       0x00000000       0x71 ./Sources/HAL/HAL_PIT.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_PORT.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_SIM.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_GPIO.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_NVIC.o
- .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_PIT.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_PORT.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_SIM.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_Systick.o
@@ -1798,27 +1812,27 @@ OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
  .comment       0x00000000       0x71 ./Sources/main.o
  .comment       0x00000000       0x71 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_frame    0x00000000      0xc6c
+.debug_frame    0x00000000      0xc30
  .debug_frame   0x00000000       0x90 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
  .debug_frame   0x00000090       0x30 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
  .debug_frame   0x000000c0      0x110 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_frame   0x000001d0       0x8c ./Sources/HAL/HAL_ADC.o
- .debug_frame   0x0000025c       0x70 ./Sources/HAL/HAL_GPIO.o
- .debug_frame   0x000002cc       0x94 ./Sources/HAL/HAL_NVIC.o
- .debug_frame   0x00000360       0xd0 ./Sources/HAL/HAL_PIT.o
- .debug_frame   0x00000430       0xd0 ./Sources/HAL/HAL_PORT.o
- .debug_frame   0x00000500       0x90 ./Sources/HAL/HAL_SIM.o
- .debug_frame   0x00000590       0x70 ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_frame   0x00000600       0xac ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_frame   0x000006ac       0xd0 ./Sources/DRIVER/DRIVER_PIT.o
- .debug_frame   0x0000077c       0xe8 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_frame   0x00000864       0x90 ./Sources/DRIVER/DRIVER_SIM.o
- .debug_frame   0x000008f4       0x84 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_frame   0x00000978       0x70 ./Sources/DRIVER/DRIVER_UART.o
- .debug_frame   0x000009e8       0x84 ./Sources/App/APP.o
- .debug_frame   0x00000a6c      0x120 ./Sources/main.o
- .debug_frame   0x00000b8c       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
- .debug_frame   0x00000bd8       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
- .debug_frame   0x00000c00       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
- .debug_frame   0x00000c2c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
- .debug_frame   0x00000c4c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
+ .debug_frame   0x000001d0       0x50 ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_frame   0x00000220      0x110 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_frame   0x00000330       0x8c ./Sources/HAL/HAL_ADC.o
+ .debug_frame   0x000003bc       0x90 ./Sources/HAL/HAL_GPIO.o
+ .debug_frame   0x0000044c       0x94 ./Sources/HAL/HAL_NVIC.o
+ .debug_frame   0x000004e0       0xd0 ./Sources/HAL/HAL_PORT.o
+ .debug_frame   0x000005b0       0x90 ./Sources/HAL/HAL_SIM.o
+ .debug_frame   0x00000640       0x90 ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_frame   0x000006d0       0x50 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_frame   0x00000720       0xe8 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_frame   0x00000808       0x90 ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_frame   0x00000898       0x84 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_frame   0x0000091c       0x90 ./Sources/DRIVER/DRIVER_UART.o
+ .debug_frame   0x000009ac      0x15c ./Sources/App/APP.o
+ .debug_frame   0x00000b08       0x48 ./Sources/main.o
+ .debug_frame   0x00000b50       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_frame   0x00000b9c       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x00000bc4       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+ .debug_frame   0x00000bf0       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x00000c10       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)

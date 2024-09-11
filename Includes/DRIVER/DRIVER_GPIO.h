@@ -44,6 +44,8 @@ void DRIVER_GPIO_TogglePin(GPIO_Type *GPIOx, uint32_t pin);
  */
 void DRIVER_GPIO_WritePin(GPIO_Type *GPIOx, uint32_t pin, DRIVER_pin_state_t pinState);
 
+bool DRIVER_GPIO_PinStatus(GPIO_Type *GPIOx, uint32_t pin);
+
 /*******************************************************************************
  * Code
  ******************************************************************************/

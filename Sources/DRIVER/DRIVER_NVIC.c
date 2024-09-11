@@ -15,7 +15,7 @@
  * Definitions
  ******************************************************************************/
 
- PIT_callback_t PIT0_callback = NULL;
+PIT_callback_t PIT0_callback = NULL;
 PIT_callback_t PIT1_callback = NULL;
 
 bool PIT0_interruptFlag = false;
@@ -44,33 +44,3 @@ void DRIVER_NVIC_setPriority(IRQn_Type irq_number, uint8_t number)
     HAL_NVIC_setPriority(irq_number, number);
 }
 
-void DRIVER_PIT0_Callback(PIT_callback_t callback)
-{
-    PIT0_callback = callback;
-}
-
-void DRIVER_PIT1_Callback(PIT_callback_t callback)
-{
-    PIT1_callback = callback;
-}
-
-void PIT_IRQHandler(void)
-{
-    if (DRIVER_PIT_timer_flag_isSet(channel_0))
-    {
-        PIT0_interruptFlag = true;
-        if (PIT0_callback != NULL)
-        {
-            PIT0_callback();
-        }
-    }
-    if (DRIVER_PIT_timer_flag_isSet(channel_1))
-    {
-        if (PIT0_callback != NULL)
-        {
-            PIT1_callback();
-        }
-        DRIVER_PIT_timer_clear_flag(channel_0);
-        DRIVER_PIT_timer_clear_flag(channel_1);
-    }
-}
