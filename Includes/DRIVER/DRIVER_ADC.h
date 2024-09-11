@@ -6,6 +6,14 @@
 #include "stdbool.h"
 #include "stdint.h"
 
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Prototype
+ ******************************************************************************/
+
 float ADC_to_Percentage(uint16_t adc_value);
 typedef HAL_input_channel_t DRIVER_input_channel_t;
 typedef HAL_ADC_MODE_single_ended_t DRIVER_ADC_MODE_single_ended_t;
@@ -22,5 +30,8 @@ void DRIVER_ADC0_StatusAndControl1(DRIVER_input_channel_t channel, DRIVER_conver
 
 uint16_t DRIVER_ADC0_dataReturn(void);
 
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
 
 #endif /** _DRIVER_ADC_H_  */

@@ -135,7 +135,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_UART/HAL_UART_C1.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
- .debug_line    0x00000000      0x285 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
+ .debug_line    0x00000000      0x289 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
  .debug_str     0x00000000    0x4f6a7 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_UART/HAL_UART_C1.o
  .ARM.attributes
@@ -375,7 +375,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_PIT.o
  .debug_macro   0x00000000       0x22 ./Sources/HAL/HAL_PIT.o
- .debug_line    0x00000000      0x262 ./Sources/HAL/HAL_PIT.o
+ .debug_line    0x00000000      0x264 ./Sources/HAL/HAL_PIT.o
  .debug_str     0x00000000    0x4f66a ./Sources/HAL/HAL_PIT.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_PIT.o
  .ARM.attributes
@@ -476,7 +476,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/HAL/HAL_Systick.o
  .debug_macro   0x00000000       0x6b ./Sources/HAL/HAL_Systick.o
  .debug_macro   0x00000000     0xd132 ./Sources/HAL/HAL_Systick.o
- .debug_line    0x00000000      0x211 ./Sources/HAL/HAL_Systick.o
+ .debug_line    0x00000000      0x213 ./Sources/HAL/HAL_Systick.o
  .debug_str     0x00000000    0x4f446 ./Sources/HAL/HAL_Systick.o
  .comment       0x00000000       0x71 ./Sources/HAL/HAL_Systick.o
  .ARM.attributes
@@ -525,7 +525,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6b ./Sources/DRIVER/DRIVER_ADC.o
  .debug_macro   0x00000000     0xd132 ./Sources/DRIVER/DRIVER_ADC.o
  .debug_macro   0x00000000       0x22 ./Sources/DRIVER/DRIVER_ADC.o
- .debug_line    0x00000000      0x27a ./Sources/DRIVER/DRIVER_ADC.o
+ .debug_line    0x00000000      0x27e ./Sources/DRIVER/DRIVER_ADC.o
  .debug_str     0x00000000    0x4f71c ./Sources/DRIVER/DRIVER_ADC.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_ADC.o
  .ARM.attributes
@@ -641,7 +641,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000       0x6b ./Sources/DRIVER/DRIVER_PIT.o
  .debug_macro   0x00000000     0xd132 ./Sources/DRIVER/DRIVER_PIT.o
- .debug_line    0x00000000      0x28c ./Sources/DRIVER/DRIVER_PIT.o
+ .debug_line    0x00000000      0x28e ./Sources/DRIVER/DRIVER_PIT.o
  .debug_str     0x00000000    0x4f694 ./Sources/DRIVER/DRIVER_PIT.o
  .comment       0x00000000       0x71 ./Sources/DRIVER/DRIVER_PIT.o
  .ARM.attributes
@@ -1728,27 +1728,27 @@ OUTPUT(HuynhDucQuangVinh_MCUASM7.elf elf32-littlearm)
  .debug_macro   0x0000f750      0x2d9 ./Sources/main.o
  .debug_macro   0x0000fa29       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_line     0x00000000     0x33ec
- .debug_line    0x00000000      0x243 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
- .debug_line    0x00000243      0x212 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
- .debug_line    0x00000455      0x285 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
- .debug_line    0x000006da      0x21d ./Sources/HAL/HAL_UART/HAL_UART_D.o
- .debug_line    0x000008f7      0x294 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
- .debug_line    0x00000b8b      0x23d ./Sources/HAL/HAL_ADC.o
- .debug_line    0x00000dc8      0x253 ./Sources/HAL/HAL_GPIO.o
- .debug_line    0x0000101b      0x23b ./Sources/HAL/HAL_NVIC.o
- .debug_line    0x00001256      0x25a ./Sources/HAL/HAL_PORT.o
- .debug_line    0x000014b0      0x22b ./Sources/HAL/HAL_SIM.o
- .debug_line    0x000016db      0x27d ./Sources/DRIVER/DRIVER_GPIO.o
- .debug_line    0x00001958      0x276 ./Sources/DRIVER/DRIVER_NVIC.o
- .debug_line    0x00001bce      0x2c0 ./Sources/DRIVER/DRIVER_PORT.o
- .debug_line    0x00001e8e      0x25f ./Sources/DRIVER/DRIVER_SIM.o
- .debug_line    0x000020ed      0x2a3 ./Sources/DRIVER/DRIVER_Systick.o
- .debug_line    0x00002390      0x2ce ./Sources/DRIVER/DRIVER_UART.o
- .debug_line    0x0000265e      0x5ea ./Sources/App/APP.o
- .debug_line    0x00002c48      0x4e9 ./Sources/main.o
- .debug_line    0x00003131       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_line    0x000031ac      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_line     0x00000000     0x3405
+ .debug_line    0x00000000      0x247 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o
+ .debug_line    0x00000247      0x214 ./Sources/HAL/HAL_UART/HAL_UART_BDL.o
+ .debug_line    0x0000045b      0x289 ./Sources/HAL/HAL_UART/HAL_UART_C2.o
+ .debug_line    0x000006e4      0x221 ./Sources/HAL/HAL_UART/HAL_UART_D.o
+ .debug_line    0x00000905      0x296 ./Sources/HAL/HAL_UART/HAL_UART_S1.o
+ .debug_line    0x00000b9b      0x241 ./Sources/HAL/HAL_ADC.o
+ .debug_line    0x00000ddc      0x253 ./Sources/HAL/HAL_GPIO.o
+ .debug_line    0x0000102f      0x23b ./Sources/HAL/HAL_NVIC.o
+ .debug_line    0x0000126a      0x25a ./Sources/HAL/HAL_PORT.o
+ .debug_line    0x000014c4      0x22b ./Sources/HAL/HAL_SIM.o
+ .debug_line    0x000016ef      0x27d ./Sources/DRIVER/DRIVER_GPIO.o
+ .debug_line    0x0000196c      0x276 ./Sources/DRIVER/DRIVER_NVIC.o
+ .debug_line    0x00001be2      0x2c0 ./Sources/DRIVER/DRIVER_PORT.o
+ .debug_line    0x00001ea2      0x25f ./Sources/DRIVER/DRIVER_SIM.o
+ .debug_line    0x00002101      0x2a3 ./Sources/DRIVER/DRIVER_Systick.o
+ .debug_line    0x000023a4      0x2d2 ./Sources/DRIVER/DRIVER_UART.o
+ .debug_line    0x00002676      0x5e9 ./Sources/App/APP.o
+ .debug_line    0x00002c5f      0x4eb ./Sources/main.o
+ .debug_line    0x0000314a       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_line    0x000031c5      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
 .debug_str      0x00000000    0x5387b
  .debug_str     0x00000000    0x4f131 ./Sources/HAL/HAL_UART/HAL_UART_BDH.o

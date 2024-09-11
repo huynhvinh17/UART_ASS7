@@ -71,25 +71,25 @@ void init_UART0(void)
     DRIVER_NVIC_EnableIRQ(UART0_IRQn);
 
     uint32_t baud_SBR = (uint32_t)((DEFAULT_MCG) / (BAUD_RATE * OVER_SAMPLING_RATIO));
-    DRIVER_UART_BDH(UART0, baud_SBR);
-    DRIVER_UART_BDL(UART0, baud_SBR);
-    DRIVER_UART_C2(UART0, transmitter_enable, receiver_enable);
+    DRIVER_UART_BDH((UART0_Type *)UART0, baud_SBR);
+    DRIVER_UART_BDL((UART0_Type *)UART0, baud_SBR);
+    DRIVER_UART_C2((UART0_Type *)UART0, transmitter_enable, receiver_enable);
     DRIVER_UART_C2_interruptStatus(UART0, hardware_interrupt_enable);
 }
 
 static void UART0_SendChar(char data)
 {
-    HAL_UART_data_assign(UART0, data);
+    HAL_UART_data_assign((UART0_Type *)UART0, data);
 
-    while (!(HAL_UART_S1_TC(UART0)))
+    while (!(HAL_UART_S1_TC((UART0_Type *)UART0)))
         ;
 }
 
 static char UART0_GetChar(void)
 {
-    while (!(HAL_UART_S1_RDRF(UART0)))
+    while (!(HAL_UART_S1_RDRF((UART0_Type *)UART0)))
         ;
-    return HAL_UART_data(UART0);
+    return HAL_UART_data((UART0_Type *)UART0);
 }
 
 static uint8_t UART0_get_CMD(const char *command)
