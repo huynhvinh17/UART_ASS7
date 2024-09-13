@@ -1,22 +1,10 @@
-/**
- * @file DRIVER_PORT.c
- * @author huynhvinh17@gmail.com
- * @brief PORT driver implementation for configuring and handling GPIO ports and interrupts.
- * @version 0.1
- * @date 2024-08-20
- *
- * @copyright Copyright (c) 2024
- *
- */
-
-
 #include "../Includes/DRIVER/DRIVER_PORT.h"
-
-uint16_t adc_value;
 
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
+
+uint16_t adc_value =0;
 
 /*******************************************************************************
  * Prototype

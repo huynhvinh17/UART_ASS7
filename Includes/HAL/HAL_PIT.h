@@ -3,6 +3,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include "MKL46Z4.h"
 
 /*******************************************************************************
  * Definitions

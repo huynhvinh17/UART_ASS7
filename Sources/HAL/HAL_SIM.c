@@ -1,14 +1,3 @@
-/**
- * @file HAL_SIM.c
- * @author huynhvinh17@gmail.com
- * @brief Hardware Abstraction Layer (HAL) for System Integration Module (SIM) clock control.
- * @version 0.1
- * @date 2024-08-20
- *
- * @copyright Copyright (c) 2024
- *
- */
-
 #include "../Includes/HAL/HAL_SIM.h"
 
 /*******************************************************************************

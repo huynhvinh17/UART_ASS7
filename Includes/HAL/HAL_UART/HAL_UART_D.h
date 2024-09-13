@@ -12,13 +12,24 @@
  * Prototype
  ******************************************************************************/
 
+/**
+ * @brief Reads a byte of data from the UART data register
+ *
+ * @param UART_number Pointer to the UART peripheral base address
+ * @return The data byte read from the UART data register
+ */
+char HAL_UART_getData(UART_Type *UART_number);
+
+/**
+ * @brief Writes a byte of data to the UART data register
+ *
+ * @param UART_number Pointer to the UART peripheral base address
+ * @param data The byte of data to be sent via UART
+ */
+void HAL_UART_sendData(UART_Type *UART_number, char data);
+
 /*******************************************************************************
  * Code
  ******************************************************************************/
-
-
-char HAL_UART_data(UART_Type *UART_number);
-
-void HAL_UART_data_assign(UART_Type *UART_number, char data);
 
 #endif /** _HAL_UART_BDH_H_ */

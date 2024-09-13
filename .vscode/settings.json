@@ -90,6 +90,9 @@
     "driver_port.h": "c",
     "hal_gpio.h": "c",
     "driver_gpio.h": "c",
-    "hal_systick.h": "c"
+    "hal_systick.h": "c",
+    "driver_adc.h": "c",
+    "driver_systick.h": "c",
+    "hal_pit.h": "c"
   }
 }

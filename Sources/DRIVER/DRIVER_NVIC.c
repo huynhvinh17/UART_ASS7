@@ -1,25 +1,8 @@
-/**
- * @file DRIVER_NVIC.c
- * @author huynhvinh17@gmail.com
- * @brief NVIC driver implementation for enabling interrupts
- * @version 0.1
- * @date 2024-08-20
- *
- * @copyright Copyright (c) 2024
- *
- */
-
 #include "../Includes/DRIVER/DRIVER_NVIC.h"
 
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-
-PIT_callback_t PIT0_callback = NULL;
-PIT_callback_t PIT1_callback = NULL;
-
-bool PIT0_interruptFlag = false;
-bool PIT1_interruptFlag = false;
 
 /*******************************************************************************
  * Prototype

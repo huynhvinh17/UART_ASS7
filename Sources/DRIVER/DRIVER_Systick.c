@@ -1,7 +1,5 @@
 #include "../Includes/DRIVER/DRIVER_Systick.h"
-#include "MKL46Z4.h"
-#include <stdint.h>
-#include <stddef.h>
+
 
 /*******************************************************************************
  * Definitions

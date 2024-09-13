@@ -2,7 +2,9 @@
 #define _DRIVER_SYSTICK_
 
 #include "../Includes/DRIVER/DRIVER_Software_timer.h"
+#include "MKL46Z4.h"
 #include <stdint.h>
+#include <stddef.h>
 
 /*******************************************************************************
  * Definitions

@@ -1,14 +1,3 @@
-/**
- * @file HAL_PORT.c
- * @author huynhvinh17@gmail.com
- * @brief Hardware Abstraction Layer (HAL) for Port operations.
- * @version 0.1
- * @date 2024-08-20
- *
- * @copyright Copyright (c) 2024
- *
- */
-
 #include "../Includes/HAL/HAL_PORT.h"
 
 /*******************************************************************************

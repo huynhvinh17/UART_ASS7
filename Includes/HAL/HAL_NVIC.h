@@ -20,6 +20,7 @@
 void HAL_EnableIRQ(IRQn_Type irq_number);
 
 void HAL_NVIC_setPriority(IRQn_Type irq_number,uint8_t number);
+
 /*******************************************************************************
  * Code
  ******************************************************************************/

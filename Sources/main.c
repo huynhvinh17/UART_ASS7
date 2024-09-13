@@ -1,5 +1,3 @@
-#include "MKL46Z4.h"
-#include "core_cm0plus.h"
 
 #include "../Includes/APP/APP.h"
 
@@ -15,19 +13,15 @@
  * Code
  ******************************************************************************/
 
-void UART0_IRQHandler(void)
-{
-	UART0_get_string(commandBuffer, MAX_STRING_LENGTH);
-	UART0_access_command(commandBuffer);
-}
-
 int main(void)
 {
 
-	Init_LED_Green();
-	Init_LED_Red();
-	init_UART0();
-	UART0_command_help();
+	Init_LED_Green(); /** Initialize the green LED */
+	Init_LED_Red();	  /** Initialize the red LED */
+	init_UART0();	  /** Initialize UART0 */
+
+	APP_command_help();				 /** Display help information */
+	DRIVER_Callback(APP_getCommand); /** APP_getCommand function to be called */
 
 	while (1)
 	{

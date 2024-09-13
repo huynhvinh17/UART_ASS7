@@ -1,14 +1,3 @@
-/**
- * @file DRIVER_GPIO.c
- * @author huynhvinh17@gmail.com
- * @brief GPIO driver implementation for initializing and controlling GPIO pins.
- * @version 0.1
- * @date 2024-08-20
- *
- * @copyright Copyright (c) 2024
- *
- */
-
 #include "../Includes/DRIVER/DRIVER_GPIO.h"
 
 /*******************************************************************************
